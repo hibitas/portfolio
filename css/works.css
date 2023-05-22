@@ -1,4 +1,5 @@
 html {
+	cursor: url('../img/circle.cur'), auto;
 	height: 100vh;
 }
 

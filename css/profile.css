@@ -1,5 +1,5 @@
 html {
-	cursor: url('./assets/img/circle.cur'), auto;
+	cursor: url('../img/circle.cur'), auto;
 	block-size: 100%;
 	inline-size: 100%;
 }

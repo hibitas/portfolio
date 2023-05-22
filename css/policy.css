@@ -1,3 +1,7 @@
+html{
+  cursor: url('../img/circle.cur'), auto;
+}
+
 body {
   height: 100vh;
   min-height: 100vh;

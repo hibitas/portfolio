@@ -1,5 +1,6 @@
 html{
 	height: 100vh;
+	cursor: url('../img/circle.cur'), auto;
 }
 body {
 	font-family: 'Syne', sans-serif;
