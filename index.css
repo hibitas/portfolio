@@ -1,0 +1,155 @@
+@charset "UTF-8";
+
+/*
+Theme Name: My Theme
+Author: Hibiki Miyamoto
+Description: My theme.
+Version: 1.0
+*/
+html {
+	cursor: url('./assets/img/circle.cur'), auto;
+	block-size: 100%;
+	inline-size: 100%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	font-family: 'Syne', sans-serif;
+	font-size: 2rem;
+	background: linear-gradient(#273F3B, #000);
+}
+
+.container {
+	margin: 0;
+	width: 100%;
+}
+
+.row .carousel-container {
+	padding-left: 0;
+}
+
+.carousel-container {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+#myCarousel {
+	height: 100%;
+	max-width: 60%;
+	margin-top: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.carousel-item img {
+	height: 100vh;
+	object-fit: cover;
+}
+
+.carousel {
+	flex: 1;
+	margin-right: 20px;
+}
+
+#texts {
+	color: white;
+	padding-left: 20px;
+	height: 100vh;
+}
+
+.menu-text {
+	padding-top: 150px;
+	font-size: 35px;
+	font-weight: 500;
+	margin: 0px;
+	align-self:flex-end;
+}
+
+.click-text p{
+	font-size: 35px;
+	font-weight: 500;
+}
+
+.welcome-text {
+	font-size: 55px;
+	font-weight: 700;
+}
+
+.menu {
+	position: absolute;
+	width: auto;
+	height: auto;
+	padding: 0;
+	right: 0;
+	top: 0;
+	z-index: 9998;
+}
+
+.menu button{
+	padding: 0px;
+	border-radius: 10px;
+}
+
+.btn-icon{
+	width: 144px;
+	height: 144px;
+}
+
+.btn-icon i{
+	font-size: 100px;
+	width: auto;
+	height: auto;
+	border-radius: 10px;
+}
+
+.modal-header,
+.modal-body,
+.modal-footer {
+	border: none;
+	background-color: #101A19;
+}
+
+.modal-header {
+	font-size: 50px;
+	width: auto;
+	height: auto;
+}
+
+.modal-body a {
+	color: white;
+	font-family: 'Syne';
+	font-weight: 800;
+	text-decoration: none;
+	position: relative;
+	font-size: 5rem;
+}
+
+.modal-body a::before {
+	transform: scaleX(0);
+	transform-origin: bottom left;
+}
+
+.modal-body a:hover::before {
+	transform: scaleX(1);
+	transform-origin: bottom right;
+}
+
+.modal-body a::before {
+	content: " ";
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	inset: 0 0 0 0;
+	background: #000;
+	z-index: -1;
+	transition: transform .3s ease;
+}
