@@ -5,7 +5,7 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="Width=device-width, initial-scale = 1" />
 	<title>My portfolio site</title>
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;700;800&display=swap" rel="stylesheet">
@@ -16,6 +16,7 @@
 		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 	<link href="./css/works.css" rel="stylesheet">
+	<link href="./css/menu.css" rel="stylesheet">
 </head>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 
@@ -49,7 +50,8 @@
 						画面の仕様変更(HTML,CSS)<br>
 						Ajaxを用いたデータの送受信機能の開発(HTML,CSS,JavaScript)<br>
 						開発環境<br>
-						Windows7,Java,JavaScript,HTML,CSS</p>
+						Windows7,Java,JavaScript,HTML,CSS
+					</p>
 				</div>
 			</div>
 			<div class="delay-time02 box fadeUp col">
@@ -91,7 +93,29 @@
 				</div>
 			</div>
 		</div>
-	</div>
+		<div class="menu">
+            <button type="button" class="btn btn-dark btn-icon " data-bs-toggle="modal" data-bs-target="#myModal">
+                <i class="bi bi-list"></i>
+            </button>
+            <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-fullscreen">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body d-flex justify-content-center align-items-center flex-column">
+							<a class="modal-link text-center d-block" href="index.html">Home</a>
+                            <a class="modal-link text-center d-block" href="profile.html">profile</a>
+                            <a class="modal-link text-center d-block" href="policy.html">policy</a>
+                            <a class="modal-link text-center d-block" href="interests.html">Interests</a>
+                            <a class="modal-link text-center d-block" href="works.html">works</a>
+                        </div>
+                        <div class="modal-footer"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
 	</div>
 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
