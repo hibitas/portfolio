@@ -75,22 +75,34 @@
 @media screen and (max-width:767px) {
 	/*　画面サイズが767px以下の場合読み込む　*/
 
-	.modal-header {
-		font-size: 85px;
+	.menu > button{
+		width: 85px;
+		height: 85px;
+		align-items: center;
+		justify-content:center;
+	}
+	.btn-icon i {
+		height: auto;
+		font-size: 60px;
+	}
+
+	.modal-header button{
+		background-color: currentColor;
+		font-size: 60px;
 		color: white;
 	}
 
-	.modal-body a{
+	.modal-body a {
 		font-size: 40px;
 		margin: 15px;
 	}
-	
+
 }
 
 @media screen and (min-width:768px) {
 	/* 画面サイズが768px以上の場合読み込む */
-	
-	.modal-body a{
+
+	.modal-body a {
 		font-size: 100px;
 	}
 }

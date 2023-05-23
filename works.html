@@ -21,103 +21,127 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 
 <body>
-	<div class="container">
-
-		<h1 class="text-white text-center">works</h1>
-		<div class="d-flex flex-row ">
-			<div class="box fadeUp col">
-				<div class="box-header">
-					<p class="text-center">Coder</p>
-				</div>
-				<div class="box-summary">
-					<p class="text-center">HTMLとCSSのコーディングと、<br>
-						依頼されたことを実現するにはどうしたらいいか調べて実装することができます<br>
-						<br>
-						2015年1月 MOSAアーキテクト株式会社入社<br>
-						航空会社向けマーケティングシステム：<br>
-						システムの開発(JSF,Java,JavaScript,HTML,CSS,MySQL)br
-						詳細設計<br>
-						<br>
-						消費者金融機関向け基幹システム：<br>
-						システムの追加開発(Java,JavaScript,HTML,CSS,Shell)<br>
-						サーバサイドのビジネスロジックのバグ修正(Java)<br>
-						<br>
-						開発環境<br>
-						Mac OSX,Java,JavaScript(jQuery),Shell,HTML,CSS,MySQL,Git,Bootstrap<br>
-						<br>
-						2015年9月 インフォサイエンス株式会社入社<br>
-						通信事業者向け組み込みWebシステム：<br>
-						画面の仕様変更(HTML,CSS)<br>
-						Ajaxを用いたデータの送受信機能の開発(HTML,CSS,JavaScript)<br>
-						開発環境<br>
-						Windows7,Java,JavaScript,HTML,CSS
-					</p>
-				</div>
+	<h1>works</h1>
+	<div class="myrow">
+		<div class="box fadeUpTrigger">
+			<div class="box-header">
+				<p>Coder</p>
 			</div>
-			<div class="delay-time02 box fadeUp col">
-				<div class="box-header">
-					<p class="text-center">Skill set</p>
-				</div>
-				<div class="box-lang d-flex flex-row justify-content-around">
-					<p class="text-center">
-						言語<br>
-						HTML 1年<br>
-						CSS 1年<br>
-						Java 1年<br>
-						JavaScript 1年<br>
-						C 経験あり<br>
-						Shell 経験あり<br>
-						Python 経験あり<br>
-						PHP 経験あり<br>
-						<br>
-						フレームワーク<br>
-						JSF 経験あり<br>
-						Apache Struts 経験あり<br>
-						Apache POI 経験あり<br>
-						Apache Log4j 経験あり<br>
-						Junit 経験あり
-					</p>
-					<p class="text-center">
-						DB<br>
-						Oracle 経験あり<br>
-						MySQL 経験あり<br>
-						DB2 経験あり<br>
-						<br>
-						その他ミドルウェア、サーバーなど<br>
-						TomEE 経験あり<br>
-						WebSphere 経験あり<br>
-						SVF(帳票) 経験あり<br>
-						TeraTerm 経験あり<br>
-						Git 経験あり<br>
-					</p>
+			<div class="box-summary">
+				<p>HTMLとCSSのコーディングと、<br>
+					依頼されたことを実現するにはどうしたらいいか調べて実装することができます<br>
+					<br>
+					2015年1月 MOSAアーキテクト株式会社入社<br>
+					航空会社向けマーケティングシステム：<br>
+					システムの開発(JSF,Java,JavaScript,HTML,CSS,MySQL)br
+					詳細設計<br>
+					<br>
+					消費者金融機関向け基幹システム：<br>
+					システムの追加開発(Java,JavaScript,HTML,CSS,Shell)<br>
+					サーバサイドのビジネスロジックのバグ修正(Java)<br>
+					<br>
+					開発環境<br>
+					Mac OSX,Java,JavaScript(jQuery),Shell,HTML,CSS,MySQL,Git,Bootstrap<br>
+					<br>
+					2015年9月 インフォサイエンス株式会社入社<br>
+					通信事業者向け組み込みWebシステム：<br>
+					画面の仕様変更(HTML,CSS)<br>
+					Ajaxを用いたデータの送受信機能の開発(HTML,CSS,JavaScript)<br>
+					開発環境<br>
+					Windows7,Java,JavaScript,HTML,CSS
+				</p>
+			</div>
+		</div>
+		<div class="delay-time02 box fadeUpTrigger">
+			<div class="box-header">
+				<p>Skill set</p>
+			</div>
+			<div class="box-lang myrow justify-content-around">
+				<p>
+					言語<br>
+					HTML 1年<br>
+					CSS 1年<br>
+					Java 1年<br>
+					JavaScript 1年<br>
+					C 経験あり<br>
+					Shell 経験あり<br>
+					Python 経験あり<br>
+					PHP 経験あり<br>
+					<br>
+					フレームワーク<br>
+					JSF 経験あり<br>
+					Apache Struts 経験あり<br>
+					Apache POI 経験あり<br>
+					Apache Log4j 経験あり<br>
+					Junit 経験あり
+				</p>
+				<p>
+					DB<br>
+					Oracle 経験あり<br>
+					MySQL 経験あり<br>
+					DB2 経験あり<br>
+					<br>
+					その他ミドルウェア、サーバーなど<br>
+					TomEE 経験あり<br>
+					WebSphere 経験あり<br>
+					SVF(帳票) 経験あり<br>
+					TeraTerm 経験あり<br>
+					Git 経験あり<br>
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="menu">
+		<button type="button" class="btn btn-dark btn-icon" data-bs-toggle="modal" data-bs-target="#myModal">
+			<i class="bi bi-list"></i>
+		</button>
+		<div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-fullscreen">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+							aria-label="Close"></button>
+					</div>
+					<div class="modal-body d-flex justify-content-center align-items-center flex-column">
+						<a class="modal-link text-center d-block" href="index.html">Top</a>
+						<a class="modal-link text-center d-block" href="profile.html">profile</a>
+						<a class="modal-link text-center d-block" href="policy.html">policy</a>
+						<a class="modal-link text-center d-block" href="interests.html">Interests</a>
+						<a class="modal-link text-center d-block" href="works.html">works</a>
+					</div>
+					<div class="modal-footer"></div>
 				</div>
 			</div>
 		</div>
-		<div class="menu">
-            <button type="button" class="btn btn-dark btn-icon " data-bs-toggle="modal" data-bs-target="#myModal">
-                <i class="bi bi-list"></i>
-            </button>
-            <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-fullscreen">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                                aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body d-flex justify-content-center align-items-center flex-column">
-							<a class="modal-link text-center d-block" href="index.html">Top</a>
-                            <a class="modal-link text-center d-block" href="profile.html">profile</a>
-                            <a class="modal-link text-center d-block" href="policy.html">policy</a>
-                            <a class="modal-link text-center d-block" href="interests.html">Interests</a>
-                            <a class="modal-link text-center d-block" href="works.html">works</a>
-                        </div>
-                        <div class="modal-footer"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
 	</div>
 
+
+	<script>
+		function fadeAnime() {
+
+			// ふわっ
+			$('.fadeUpTrigger').each(function () { //fadeUpTriggerというクラス名が
+				var elemPos = $(this).offset().top - 50;//要素より、50px上の
+				var scroll = $(window).scrollTop();
+				var windowHeight = $(window).height();
+				if (scroll >= elemPos - windowHeight) {
+					$(this).addClass('fadeUp');// 画面内に入ったらfadeUpというクラス名を追記
+				} else {
+					$(this).removeClass('fadeUp');// 画面外に出たらfadeUpというクラス名を外す
+				}
+			});
+		}
+
+		// 画面をスクロールをしたら動かしたい場合の記述
+		$(window).scroll(function () {
+			fadeAnime();/* アニメーション用の関数を呼ぶ*/
+		});// ここまで画面をスクロールをしたら動かしたい場合の記述
+
+		// 画面が読み込まれたらすぐに動かしたい場合の記述
+		$(window).on('load', function () {
+			fadeAnime();/* アニメーション用の関数を呼ぶ*/
+		});// ここまで画面が読み込まれたらすぐに動かしたい場合の記述
+	</script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
 		crossorigin="anonymous"></script>

@@ -1,19 +1,29 @@
 html {
 	cursor: url('../img/circle.cur'), auto;
-	height: 100vh;
 }
 
 body {
 	font-family: 'Syne', sans-serif;
-	font-size: 2rem;
 	background: linear-gradient(#273F3B, #000);
 }
 
 h1 {
+	color: white;
+	text-align: center;
 	margin-top: 50px !important;
 	margin-bottom: 30px;
 	font-size: 100px;
 	font-weight: 800;
+}
+
+p {
+	text-align: center;
+}
+
+.myrow {
+	display: flex;
+	justify-content: space-evenly;
+	flex-direction: row;
 }
 
 .box-header {
@@ -47,6 +57,7 @@ h1 {
 
 .box {
 	opacity: 0;
+	justify-content: center;
 }
 
 /*==================================================
@@ -70,4 +81,31 @@ h1 {
 		opacity: 1;
 		transform: translateY(0);
 	}
+}
+
+@media screen and (max-width:767px) {
+	/*　画面サイズが767px以下の場合読み込む　*/
+
+	h1 {
+		font-size: 40px;
+	}
+
+	.myrow {
+		flex-direction: column;
+	}
+
+	.box-header {
+		font-size: 30px;
+	}
+
+	.box-summary,.box-lang {
+		justify-content: center;
+		font-size: 16px;
+		font-weight: 500;
+	}
+}
+
+@media screen and (min-width:768px) {
+	/* 画面サイズが768px以上の場合読み込む */
+
 }

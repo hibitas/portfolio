@@ -1,6 +1,5 @@
 html {
 	cursor: url('../img/circle.cur'), auto;
-	height: 100%;
 }
 
 body {
@@ -76,6 +75,9 @@ img {
 
 @media screen and (min-width:768px) {
 	/* 画面サイズが768px以上の場合読み込む */
+	html{
+		height: 100vh;
+	}
 	h1{
 		font-size: 100px;
 	}

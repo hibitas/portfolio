@@ -1,8 +1,3 @@
-html,
-body {
-	height: 100vh;
-}
-
 html {
 	cursor: url('../img/circle.cur'), auto;
 	overflow: hidden;
@@ -38,6 +33,7 @@ body {
 		font-size: 45px;
 		font-weight: 700;
 		margin-top: 75px;
+		margin-bottom: auto;
 		z-index: 100;
 		position:absolute;
 		top: 70%;
