@@ -35,10 +35,10 @@
 
 .modal-header {
 	font-size: 100px;
-	color:  white;
+	color: white;
 }
 
-.modal-footer{
+.modal-footer {
 	display: none;
 }
 
@@ -48,7 +48,6 @@
 	font-weight: 800;
 	text-decoration: none;
 	position: relative;
-	font-size: 100px;
 }
 
 .modal-body a::before {
@@ -73,4 +72,27 @@
 	background: #000;
 	z-index: -1;
 	transition: transform .3s ease;
+}
+
+@media screen and (max-width:767px) {
+	/*　画面サイズが767px以下の場合読み込む　*/
+
+	.modal-header {
+		font-size: 85px;
+		color: white;
+	}
+
+	.modal-body a{
+		font-size: 40px;
+		margin: 15px;
+	}
+	
+}
+
+@media screen and (min-width:768px) {
+	/* 画面サイズが768px以上の場合読み込む */
+	
+	.modal-body a{
+		font-size: 100px;
+	}
 }

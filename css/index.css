@@ -1,3 +1,8 @@
+html,
+body {
+	height: 100vh;
+}
+
 html {
 	cursor: url('../img/circle.cur'), auto;
 	overflow: hidden;
@@ -10,7 +15,7 @@ body {
 
 .container {
 	margin: 0;
-	width: 100%;
+	min-width: 100%;
 	display: contents;
 }
 
@@ -22,52 +27,96 @@ body {
 	align-items: center;
 }
 
-#myCarousel {
-	height: 100%;
-	max-width: 60%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+@media screen and (max-width:767px) {
+
+	/*　画面サイズが767px以下の場合読み込む　*/
+	.carousel-container {
+		width: 100vh !important;
+	}
+
+	#carousel-text{
+		font-size: 45px;
+		font-weight: 700;
+		margin-top: 75px;
+		z-index: 100;
+		position:absolute;
+		top: 70%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	#myCarousel {
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.carousel-item img {
+		height: 100vh;
+		object-fit: cover;
+	}
+
+	#texts {
+		display: none !important;
+	}
+
 }
 
-.carousel-item img {
-	height: 100vh;
-	object-fit: cover;
-}
+@media screen and (min-width:768px) {
+	/* 画面サイズが768px以上の場合読み込む */
 
-.carousel {
-	margin-right: 20px;
-}
+	#carousel-text{
+		display: none;
+	}
 
-#texts {
-	color: white;
-	padding-left: 20px;
-	height: 100vh;
-	flex: 1;
-}
+	#myCarousel {
+		height: 100%;
+		max-width: 60%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
 
-.menu-group {
-	margin-top: 150px;
-}
+	.carousel-item img {
+		height: 100vh;
+		object-fit: cover;
+	}
 
-.click-group{
-	margin-top: 10px;
-}
+	.carousel {
+		margin-right: 20px;
+	}
 
-p#menu-text {
-	padding-top: 110px;
-	font-size: 35px;
-	font-weight: 500;
-	margin-right: 20px;
-}
+	#texts {
+		color: white;
+		padding-left: 20px;
+		height: 100vh;
+		flex: 1;
+	}
 
-p#click-text{
-	font-size: 35px;
-	font-weight: 500;
-}
+	.menu-group {
+		margin-top: 150px;
+	}
 
-p#welcome-text {
-	margin-bottom: 100px;
-	font-size: 55px;
-	font-weight: 700;
+	.click-group {
+		margin-top: 10px;
+	}
+
+	p#menu-text {
+		padding-top: 110px;
+		font-size: 35px;
+		font-weight: 500;
+		margin-right: 20px;
+	}
+
+	p#click-text {
+		font-size: 35px;
+		font-weight: 500;
+	}
+
+	p#welcome-text {
+		margin-bottom: 100px;
+		font-size: 55px;
+		font-weight: 700;
+	}
 }
