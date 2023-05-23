@@ -1,10 +1,9 @@
-html{
-	height: 100vh;
+html {
 	cursor: url('../img/circle.cur'), auto;
 }
+
 body {
 	font-family: 'Syne', sans-serif;
-	font-size: 2rem;
 	background: linear-gradient(#273F3B, #000);
 }
 
@@ -15,7 +14,7 @@ h1 {
 	font-weight: 800;
 }
 
-p{
+p {
 	text-align: center;
 	font-family: 'Noto sans JP';
 	font-size: 30px;
@@ -67,8 +66,93 @@ p{
 	opacity: 1;
 }
 
-.summary p{
+.summary p {
 	margin-top: 30px;
 	margin-bottom: 0px;
 	font-size: 24px;
+}
+
+@media screen and (max-width:767px) {
+	/*　画面サイズが767px以下の場合読み込む　*/
+
+	h1 {
+		font-size: 40px;
+	}
+
+	p {
+		font-size: 16px !important;
+		font-weight: 700;
+	}
+
+	.myInterests {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.hover {
+		position: relative;
+		width: 300px;
+		height: 346px;
+		margin: 15px 0;
+	}
+
+	.hover .hover-text .text1 {
+		font-size: 20px;
+	}
+
+	.hover-img img {
+		width: 300px;
+		height: 346px;
+		border-radius: 6px;
+	}
+
+	.hover .hover-text {
+		position: absolute;
+		width: 300px;
+		height: 346px;
+		padding: 55px 0px;
+	}
+
+	.summary p {
+		margin-top: 15px;
+		margin-bottom: 30px;
+	}
+
+	.tap-me {
+		height: 47px;
+		width: 47px;
+		font-family: 'Syne';
+		font-weight: 800;
+		font-size: 13px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		border-radius: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: white;
+		z-index: 1;
+	}
+
+	.hover:hover .tap-me {
+		/*透明にして非表示*/
+		opacity: 0;
+	}
+}
+
+@media screen and (min-width:768px) {
+
+	/* 画面サイズが768px以上の場合読み込む */
+	.hover .hover-text .text1 {
+		font-size: 20px;
+	}
+
+	.myInterests {
+		justify-content: space-around;
+	}
+
+	.tap-me {
+		display: none;
+	}
 }

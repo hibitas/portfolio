@@ -20,82 +20,100 @@
 </head>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 
-<body>
+<body ontouchstart="">
 
 	<div class="container">
-		<h1 class="text-white text-center">Interests</h1>
-		<p class="text-white text-center">料理、映画、音楽、読書は私にとって人生を豊かにする重要な要素です</p>
-		<div class="d-flex justify-content-around">
-			<section class="hover">
-				<div class="hover-img">
-					<img src="./img/niku.png" alt="cooking">
-				</div>
-				<div class="hover-text">
-					<p class="text1">
-						料理は私の創造性を引き出す場でもあり、食べ物を通じて人々とつながる手段でもあります。新しいレシピを試したり、独自のアレンジを加えたりすることで、自分の好みや個性を表現できます。また、料理は文化や伝統を体験する方法でもあります。世界中の料理を探求することで、異なる国や文化に触れることができます。
-					</p>
-				</div>
-			</section>
-			<section class="hover">
-				<div class="hover-img">
-					<img src="./img/movie.png" alt="movie">
-				</div>
-				<div class="hover-text">
-					<p class="text1">
-						映画は私にとって感情を揺さぶられる素晴らしい芸術形式です。映画は物語を視覚的かつ感情的に伝えることができ、私たちを異なる世界に連れて行ってくれます。さまざまなジャンルの映画を鑑賞することで、様々な視点やアイデアに触れることができます。また、映画は共感や感動を呼び起こし、私たちの心に深い印象を残します。
-					</p>
-				</div>
-			</section>
-			<section class="hover">
-				<div class="hover-img">
-					<img src="./img/music.png" alt="music">
-				</div>
-				<div class="hover-text">
-					<p class="text1">
-						音楽は私の心を豊かにし、エネルギーを与えてくれる存在です。さまざまなジャンルの音楽を聴くことで、様々な感情を引き出されます。音楽は言葉を超えて私たちの心に響き、心の中の特別な場所を刺激します。また、音楽は人々を結びつけ、共感や共鳴を生み出す力を持っています。
-					</p>
-				</div>
-			</section>
-
-			<section class="hover">
-				<div class="hover-img">
-					<img src="./img/reading.png" alt="reading">
-				</div>
-				<div class="hover-text">
-					<p class="text1">
-						読書は私の知識を拡げ、想像力を刺激する優れた手段です。本は異なる世界や時代に私たちを連れて行ってくれます。物語や情報を通じて新しい視点を得ることができますし、読書は自己成長や学びのプロセスにも欠かせません。本を読むことは私にとって静寂とリラックスをもたらし、新たな発見や洞察を提供してくれます。
-					</p>
-				</div>
-			</section>
+		<div class="row">
+			<h1 class="text-white text-center">Interests</h1>
 		</div>
-
-		<div class="summary">
-			<p>料理、映画、音楽、読書は私の生活において重要な役割を果たしています。<br>
-			これらの活動を通じて、自己表現や学び、感情の豊かさを追求し、より充実した人生を送ることができます。</p>
+		<div class="row">
+			<p class="text-white text-center">料理、映画、音楽、読書は私にとって人生を豊かにする重要な要素です</p>
 		</div>
-		<div class="menu">
-            <button type="button" class="btn btn-dark btn-icon " data-bs-toggle="modal" data-bs-target="#myModal">
-                <i class="bi bi-list"></i>
-            </button>
-            <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-fullscreen">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                                aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body d-flex justify-content-center align-items-center flex-column">
-							<a class="modal-link text-center d-block" href="index.html">Home</a>
-                            <a class="modal-link text-center d-block" href="profile.html">profile</a>
-                            <a class="modal-link text-center d-block" href="policy.html">policy</a>
-                            <a class="modal-link text-center d-block" href="interests.html">Interests</a>
-                            <a class="modal-link text-center d-block" href="works.html">works</a>
-                        </div>
-                        <div class="modal-footer"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
+		<div class="row">
+			<div class="d-flex myInterests">
+				<section class="hover">
+					<div class="hover-img">
+						<img src="./img/niku.png" alt="cooking">
+					</div>
+					<div class="tap-me">
+						TAP
+					</div>
+					<div class="hover-text">
+						<p class="text1">
+							料理は私の創造性を引き出す場でもあり、食べ物を通じて人々とつながる手段でもあります。新しいレシピを試したり、独自のアレンジを加えたりすることで、自分の好みや個性を表現できます。また、料理は文化や伝統を体験する方法でもあります。世界中の料理を探求することで、異なる国や文化に触れることができます。
+						</p>
+					</div>
+				</section>
+				<section class="hover">
+					<div class="hover-img">
+						<img src="./img/movie.png" alt="movie">
+					</div>
+					<div class="tap-me">
+						TAP
+					</div>
+					<div class="hover-text">
+						<p class="text1">
+							映画は私にとって感情を揺さぶられる素晴らしい芸術形式です。映画は物語を視覚的かつ感情的に伝えることができ、私たちを異なる世界に連れて行ってくれます。さまざまなジャンルの映画を鑑賞することで、様々な視点やアイデアに触れることができます。また、映画は共感や感動を呼び起こし、私たちの心に深い印象を残します。
+						</p>
+					</div>
+				</section>
+				<section class="hover">
+					<div class="hover-img">
+						<img src="./img/music.png" alt="music">
+					</div>
+					<div class="tap-me">
+						TAP
+					</div>
+					<div class="hover-text">
+						<p class="text1">
+							音楽は私の心を豊かにし、エネルギーを与えてくれる存在です。さまざまなジャンルの音楽を聴くことで、様々な感情を引き出されます。音楽は言葉を超えて私たちの心に響き、心の中の特別な場所を刺激します。また、音楽は人々を結びつけ、共感や共鳴を生み出す力を持っています。
+						</p>
+					</div>
+				</section>
+				<section class="hover">
+					<div class="hover-img">
+						<img src="./img/reading.png" alt="reading">
+					</div>
+					<div class="tap-me">
+						TAP
+					</div>
+					<div class="hover-text">
+						<p class="text1">
+							読書は私の知識を拡げ、想像力を刺激する優れた手段です。本は異なる世界や時代に私たちを連れて行ってくれます。物語や情報を通じて新しい視点を得ることができますし、読書は自己成長や学びのプロセスにも欠かせません。本を読むことは私にとって静寂とリラックスをもたらし、新たな発見や洞察を提供してくれます。
+						</p>
+					</div>
+				</section>
+			</div>
+		</div>
+		<div class="row">
+			<div class="summary">
+				<p>料理、映画、音楽、読書は私の生活において重要な役割を果たしています。<br>
+					これらの活動を通じて、自己表現や学び、感情の豊かさを追求し、より充実した人生を送ることができます。</p>
+			</div>
+			<div class="menu">
+				<button type="button" class="btn btn-dark btn-icon " data-bs-toggle="modal" data-bs-target="#myModal">
+					<i class="bi bi-list"></i>
+				</button>
+				<div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+					<div class="modal-dialog modal-fullscreen">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+									aria-label="Close"></button>
+							</div>
+							<div class="modal-body d-flex justify-content-center align-items-center flex-column">
+								<a class="modal-link text-center d-block" href="index.html">Top</a>
+								<a class="modal-link text-center d-block" href="profile.html">profile</a>
+								<a class="modal-link text-center d-block" href="policy.html">policy</a>
+								<a class="modal-link text-center d-block" href="interests.html">Interests</a>
+								<a class="modal-link text-center d-block" href="works.html">works</a>
+							</div>
+							<div class="modal-footer"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

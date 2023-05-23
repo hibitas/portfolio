@@ -1,47 +1,96 @@
 html {
 	cursor: url('../img/circle.cur'), auto;
-	block-size: 100%;
-	inline-size: 100%;
+	height: 100%;
 }
+
 body {
-	margin: 0;
-	padding: 0;
-	height: 100vh;
 	font-family: 'Syne', sans-serif;
-	font-size: 2rem;
 	background: linear-gradient(#273F3B, #000);
-	overflow: hidden;
 }
-h1{
-	padding-top: 100px;
+
+h1 {
+	padding-top: 50px;
 	padding-bottom: 0px;
 	margin-bottom: 0px;
-	font-size: 100px;
 	font-weight: 800;
 }
-.profile-texts{
-	padding-left: 50px;
-	padding-right: 100px;
-	margin: 0;
-	font-size: 30px;
-	width:fit-content;
+
+.profile-texts {
+	width: fit-content;
 }
+
 img {
-	width: 330px;
-	height: 330px;
-	border-radius: 50%;
+	width: 330px !important;
+	height: 330px !important;
+	border-radius: 50% !important;
+	padding: 0 !important;
 }
-.main-content{
+
+.main-content {
+	display: flex;
+	align-items: center;
 	padding-top: 154px;
-	padding-left: 10%;
-	padding-right: 10%;
+	width: auto;
 	font-family: 'Noto Sans JP', sans-serif;
 }
-.past{
+
+.past-pc p{
 	font-size: 20px;
 	text-align: center;
 }
-.past-one{
+
+
+.past-one {
 	padding-bottom: 40px;
 	margin-bottom: 0px;
+}
+
+@media screen and (max-width:767px) {
+
+	/*　画面サイズが767px以下の場合読み込む　*/
+	h1{
+		font-size: 40px;
+	}
+	img{
+		width: auto !important;
+		height: auto !important;
+		padding: 0;
+	}
+	.main-content {
+		padding-top: 30px;
+		margin: 0 30px;
+		justify-content: center;
+		align-items: center;
+	}
+	.profile-texts{
+		padding-top: 30px;
+		font-size: 20px;
+	}
+	.past-pc{
+		display: none;
+	}
+	.past-mb p{
+		font-size: 16px;
+	}
+}
+
+@media screen and (min-width:768px) {
+	/* 画面サイズが768px以上の場合読み込む */
+	h1{
+		font-size: 100px;
+	}
+	.profile-texts{
+		padding-left: 50px;
+		font-size: 30px;
+	}
+	.past-pc{
+		width: auto;
+	}
+	.main-content{
+		height: 330px;
+		flex-direction: row;
+	}
+	.past-mb{
+		display: none;
+	}
 }
