@@ -1,7 +1,7 @@
 html {
 	cursor: url('../img/cursor.cur'), auto;
 	min-height: 100vh;
-	overflow: hidden;
+	background: black
 }
 
 body {
@@ -51,6 +51,7 @@ img {
 	/*　画面サイズが767px以下の場合読み込む　*/
 	html{
 		height: 100%;
+		overflow: scroll;
 	}
 	h1 {
 		font-size: 40px;
@@ -86,6 +87,9 @@ img {
 @media screen and (min-width:768px) {
 	/* 画面サイズが768px以上の場合読み込む */
 
+	html{
+		overflow: hidden;
+	}
 	h1 {
 		font-size: 100px;
 	}
