@@ -49,6 +49,9 @@ img {
 @media screen and (max-width:767px) {
 
 	/*　画面サイズが767px以下の場合読み込む　*/
+	html{
+		height: 100%;
+	}
 	h1 {
 		font-size: 40px;
 	}
