@@ -109,7 +109,7 @@
 	  
 			if (isCollapsed) {
 			  // アコーディオンが収納されている場合は、コンテンツの高さを取得してページの高さを更新
-			  var contentHeight = accordionContent.scrollHeight;
+			  var contentHeight = accordionContent?.scrollHeight;
 			  var newHeight = Math.max(bodyHeight, windowHeight, contentHeight);
 			  document.body.style.height = newHeight + 'px';
 			} else {

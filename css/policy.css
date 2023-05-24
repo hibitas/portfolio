@@ -1,12 +1,10 @@
 html {
-	cursor: url('../img/cursor.cur'), auto;
+  cursor: url('../img/cursor.cur'), auto;
 }
 
 body {
-  height: 100vh;
   min-height: 100vh;
   font-family: 'Syne', sans-serif;
-  font-size: 2rem;
   background: linear-gradient(#273F3B, #000);
 }
 
@@ -107,7 +105,7 @@ h1 {
     padding-bottom: 30px;
   }
 
-  .myaccordion > div{
+  .myaccordion>div {
     padding-top: 30px;
   }
 }
