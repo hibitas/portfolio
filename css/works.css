@@ -1,5 +1,6 @@
 html {
-	cursor: url('../img/circle.cur'), auto;
+	cursor: url('../img/cursor.cur'), auto;
+	min-height: 100vh;
 }
 
 body {
