@@ -1,5 +1,7 @@
 html {
 	cursor: url('../img/cursor.cur'), auto;
+	min-height: 100vh;
+	overflow: hidden;
 }
 
 body {
@@ -33,7 +35,7 @@ img {
 	font-family: 'Noto Sans JP', sans-serif;
 }
 
-.past-pc p{
+.past-pc p {
 	font-size: 20px;
 	text-align: center;
 }
@@ -47,52 +49,59 @@ img {
 @media screen and (max-width:767px) {
 
 	/*　画面サイズが767px以下の場合読み込む　*/
-	h1{
+	h1 {
 		font-size: 40px;
 	}
-	img{
+
+	img {
 		width: auto !important;
 		height: auto !important;
 		padding: 0;
 	}
+
 	.main-content {
 		padding-top: 30px;
 		margin: 0 30px;
 		justify-content: center;
 		align-items: center;
 	}
-	.profile-texts{
+
+	.profile-texts {
 		padding-top: 30px;
 		font-size: 20px;
 	}
-	.past-pc{
+
+	.past-pc {
 		display: none;
 	}
-	.past-mb p{
+
+	.past-mb p {
 		font-size: 16px;
 	}
 }
 
 @media screen and (min-width:768px) {
 	/* 画面サイズが768px以上の場合読み込む */
-	html{
-		height: 100vh;
-	}
-	h1{
+
+	h1 {
 		font-size: 100px;
 	}
-	.profile-texts{
+
+	.profile-texts {
 		padding-left: 50px;
 		font-size: 30px;
 	}
-	.past-pc{
+
+	.past-pc {
 		width: auto;
 	}
-	.main-content{
+
+	.main-content {
 		height: 330px;
 		flex-direction: row;
 	}
-	.past-mb{
+
+	.past-mb {
 		display: none;
 	}
 }
