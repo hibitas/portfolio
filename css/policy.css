@@ -18,54 +18,109 @@ h1 {
 }
 
 .policy {
+  color: white;
+  text-align: center;
   font-family: 'Noto sans JP';
   margin-bottom: 50px;
 }
 
-.accordion-item {
-  padding: 0;
+.panels {
+  font-family: 'Noto sans JP';
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.panel-header {
   width: 600px;
-  display: table-cell;
-  vertical-align: middle;
+  height: 104px;
+  cursor: pointer;
+  background-image: url('../img/kadomarubutton.png');
+  /* ヘッダーのデフォルトの背景画像 */
 }
 
-.accordion-body {
-  font-family: 'Noto sans JP';
-  font-weight: 400;
-  font-size: 20px;
-  padding: 0 10px;
-  overflow: hidden;
-}
-
-.accordion-item h2 button {
-  text-decoration: none;
+.panel-header>p {
+  height: 104px !important;
   font-size: 30px;
+  font-weight: 500;
+  text-overflow: clip;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#panel-one {
+  display: none;
+}
+
+#panel-two {
+  display: none;
+}
+
+#panel-one.open {
+  width: 600px !important;
+  height: 462px !important;
   font-family: 'Noto sans JP';
-  color: black;
-  padding: 0;
-  border-radius: 0;
-  box-shadow: none !important;
+  font-size: 20px;
+  font-weight: 400;
+  display: block;
+  /* クリックで開くときに表示 */
+  background-image: url('../img/kadomarubody1.png');
+  /* コンテンツが開いたときの背景画像 */
+  padding-top: 61px;
+  padding-left: 51px;
+  padding-right: 50px;
+  padding-bottom: 60px;
 }
 
-.accordion-button {
-  display: table-cell;
-  vertical-align: middle;
+#panel-two.open {
+  width: 600px !important;
+  height: 532px !important;
+  font-family: 'Noto sans JP';
+  font-size: 20px;
+  font-weight: 400;
+  display: block;
+  /* クリックで開くときに表示 */
+  background-image: url('../img/kadomarubody2.png');
+  /* コンテンツが開いたときの背景画像 */
+
+  padding-top: 61px;
+  padding-left: 51px;
+  padding-right: 50px;
+  padding-bottom: 60px;
 }
 
-.accordion-button::after,
-.accordion-button:not(.collapsed)::after {
-  background-image: none !important;
+.panel-header.open {
+  height: 52px;
+  background-image: url('../img/kadomaruheader.png') !important;
+  /* ヘッダーが開いたときの背景画像 */
 }
 
-.accordion-item h2 button.collapsed {
-  box-shadow: none !important;
+.panel-content {
+  background-image: none;
+  margin: 0;
+  /* コンテンツのデフォルトの背景画像 */
 }
 
-.accordion-button:not(.collapsed) {
-  color: black;
-  background: transparent;
-  border: none;
-}
+.fadeDown{
+  animation-name:fadeDownAnime;
+  animation-duration:0.5s;
+  animation-fill-mode:forwards;
+  opacity:0;
+  }
+  
+  @keyframes fadeDownAnime{
+    from {
+      opacity: 0;
+    transform: translateY(-100px);
+    }
+  
+    to {
+      opacity: 1;
+    transform: translateY(0);
+    }
+  }
 
 @media screen and (max-width:767px) {
 
@@ -79,35 +134,6 @@ h1 {
     font-weight: 700;
     margin-bottom: 0px;
   }
-
-  .row .accordion .accordion-item {
-    margin-top: 30px !important;
-  }
-
-  .accordion-item .accordion-body {
-    padding-top: 30px;
-  }
-
-  .accordion-item h2 button {
-    font-size: 20px;
-  }
-
-  #myaccordionFlush .accordion-item {
-    font-size: 40px;
-    border-top: 18px solid white;
-    border-bottom: 18px solid white;
-    border-left: 30px solid white;
-    border-right: 30px solid white;
-    border-radius: 100px;
-  }
-
-  .accordion-collapse.collapse.show {
-    padding-bottom: 30px;
-  }
-
-  .myaccordion>div {
-    padding-top: 30px;
-  }
 }
 
 @media screen and (min-width:768px) {
@@ -117,22 +143,5 @@ h1 {
   .policy {
     font-size: 30px;
     font-weight: 500;
-  }
-
-  .accordion-item .accordion-body {
-    padding-top: 61px;
-  }
-
-  #myaccordionFlush .accordion-item {
-    font-size: 40px;
-    border-top: 30px solid white;
-    border-bottom: 30px solid white;
-    border-left: 51px solid white;
-    border-right: 50px solid white;
-    border-radius: 100px;
-  }
-
-  .accordion-collapse.collapse.show {
-    border-bottom: 30px solid white;
   }
 }
