@@ -141,7 +141,16 @@ p {
 	}
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width:768px) and (max-width:1440px) {
+	
+	.myInterests{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+}
+
+@media screen and (min-width:1441px) {
 
 	/* 画面サイズが768px以上の場合読み込む */
 	.hover .hover-text .text1 {
@@ -149,9 +158,11 @@ p {
 	}
 
 	.myInterests {
-		justify-content: space-around;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
 	}
-
+	
 	.tap-me {
 		display: none;
 	}
