@@ -77,6 +77,7 @@ p {
 	/*　画面サイズが767px以下の場合読み込む　*/
 
 	h1 {
+		margin-top: 100px !important;
 		font-size: 40px;
 	}
 
@@ -145,7 +146,7 @@ p {
 }
 
 @media screen and (min-width:768px) and (max-width:1440px) {
-	
+	/* 画面サイズが768px以上で1440px以下の場合読み込む */
 	.myInterests{
 		display: flex;
 		flex-wrap: wrap;
@@ -155,7 +156,7 @@ p {
 
 @media screen and (min-width:1441px) {
 
-	/* 画面サイズが768px以上の場合読み込む */
+	/* 画面サイズが1441px以上の場合読み込む */
 	.hover .hover-text .text1 {
 		font-size: 20px;
 	}
