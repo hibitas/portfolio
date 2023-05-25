@@ -105,6 +105,10 @@ p {
 		font-size: 16px;
 		font-weight: 500;
 	}
+
+	.modal-open {
+		padding-right: 0px !important;
+	}
 }
 
 @media screen and (min-width:768px) {
