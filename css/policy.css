@@ -24,6 +24,11 @@ h1 {
   margin-bottom: 50px;
 }
 
+.panels-row {
+  display: flex;
+  justify-content: space-around;
+}
+
 .panels {
   font-family: 'Noto sans JP';
   display: flex;
@@ -97,31 +102,14 @@ h1 {
   /* コンテンツのデフォルトの背景画像 */
 }
 
-.fadeDown {
-  animation-name: fadeDownAnime;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
-  opacity: 0;
-}
+@media screen and (max-width:768px) {
 
-@keyframes fadeDownAnime {
-  from {
-    opacity: 0;
-    transform: translateY(-100px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@media screen and (max-width:767px) {
-
-  /*　画面サイズが767px以下の場合読み込む　*/
+  /*　画面サイズが768px以下の場合読み込む　*/
   h1 {
     margin-top: 100px !important;
     font-size: 40px;
+    min-height: -webkit-fill-available;
+    overflow-x: hidden;
   }
 
   .policy {
@@ -130,16 +118,29 @@ h1 {
     margin-bottom: 0px;
   }
 
+  .panels-row {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
+  }
+
   .panels {
     display: table-cell;
     vertical-align: middle;
-    flex-direction: column;
+    padding: 0;
   }
-  .panels:first-child>div{
+
+  .panels:first-child>div {
     margin-top: 30px;
   }
-  .panel-container{
+
+  .panel-container {
+    margin-left: 30px;
+    margin-right: 30px;
     margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .panel-header>p {
@@ -189,7 +190,7 @@ h1 {
     padding-bottom: 30px;
   }
 
-  #panel-one.opnen,
+  #panel-one.open,
   #panel-two.open {
     padding-top: 30px;
     padding-left: 29px;
@@ -197,18 +198,19 @@ h1 {
     padding-bottom: 30px;
   }
 
-
+  .modal-open {
+    padding-right: 0px !important;
+  }
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width:769px) {
 
-  /* 画面サイズが768px以上の場合読み込む */
+  /* 画面サイズが769px以上の場合読み込む */
 
   .policy {
     font-size: 30px;
     font-weight: 500;
   }
-
 
   #panel-one.open,
   #panel-two.open {
@@ -216,5 +218,56 @@ h1 {
     padding-left: 51px;
     padding-right: 50px;
     padding-bottom: 60px;
+  }
+}
+
+@media screen and (max-width:320px) {
+  /*　画面サイズが320px以下の場合読み込む　*/
+  .panel-container {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .panel-header {
+    width: 300px;
+    height: 64px;
+    cursor: pointer;
+    background-image: url('../img/assets/mb-kadomarubutton.png');
+    /* ヘッダーのデフォルトの背景画像 */
+  }
+
+  .panel-header.open {
+    height: 32px;
+    background-image: url('../img/assets/mb-kadomaruheader.png') !important;
+    /* ヘッダーが開いたときの背景画像 */
+  }
+
+  #panel-one.open {
+    width: 300px !important;
+    height: 483px !important;
+    background-image: url('../img/assets/mb-kadomarubody1.png');
+    /* コンテンツが開いたときの背景画像 */
+    font-size: 16px;
+    font-weight: 400;
+    padding-top: 30px;
+    padding-left: 29px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+  }
+
+  #panel-two.open {
+    width: 300px !important;
+    height: 603px !important;
+    background-image: url('../img/assets/mb-kadomarubody2.png');
+    /* コンテンツが開いたときの背景画像 */
+    font-size: 16px;
+    font-weight: 400;
+    padding-top: 30px;
+    padding-left: 29px;
+    padding-right: 30px;
+    padding-bottom: 30px;
   }
 }
