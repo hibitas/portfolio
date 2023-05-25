@@ -102,9 +102,10 @@ h1 {
   /* コンテンツのデフォルトの背景画像 */
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:320px) {
 
-  /*　画面サイズが768px以下の場合読み込む　*/
+  /*　画面サイズが320px以下の場合読み込む　*/
+
   h1 {
     margin-top: 100px !important;
     font-size: 40px;
@@ -138,9 +139,96 @@ h1 {
     margin-left: 30px;
     margin-right: 30px;
     margin-bottom: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+  }
+
+  .panel-header>p {
+    padding-top: 18px;
+    padding-bottom: 18px;
+    font-size: 20px;
+    height: 64px !important;
+  }
+
+  .panel-container {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 30px;
+  }
+
+  .panel-header {
+    width: 300px;
+    height: 64px;
+    cursor: pointer;
+    background-image: url('../img/assets/mb-kadomarubutton.png');
+    /* ヘッダーのデフォルトの背景画像 */
+  }
+
+  .panel-header.open {
+    height: 32px;
+    background-image: url('../img/assets/mb-kadomaruheader.png') !important;
+    /* ヘッダーが開いたときの背景画像 */
+  }
+
+  #panel-one.panel-content.open {
+    height: 483px !important;
+    background-image: url('../img/assets/mb-kadomarubody1.png');
+    /* コンテンツが開いたときの背景画像 */
+  }
+
+  #panel-two.panel-content.open {
+    height: 603px !important;
+    background-image: url('../img/assets/mb-kadomarubody2.png');
+    /* コンテンツが開いたときの背景画像 */
+  }
+
+  #panel-one.open,
+  #panel-two.open {
+    width: 300px !important;
+    font-size: 16px;
+    font-weight: 400;
+    padding-top: 30px;
+    padding-left: 29px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+@media screen and (min-width:321px) and (max-width:768px) {
+
+  /*　画面サイズが321px以上768px以下の場合読み込む　*/
+  h1 {
+    margin-top: 100px !important;
+    font-size: 40px;
+    min-height: -webkit-fill-available;
+    overflow-x: hidden;
+  }
+
+  .policy {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 0px;
+  }
+
+  .panels-row {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
+  }
+
+  .panels {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0;
+  }
+
+  .panels:first-child>div {
+    margin-top: 30px;
+  }
+
+  .panel-container {
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 30px;
   }
 
   .panel-header>p {
@@ -171,10 +259,6 @@ h1 {
     /* コンテンツが開いたときの背景画像 */
     font-size: 16px;
     font-weight: 400;
-    padding-top: 30px;
-    padding-left: 29px;
-    padding-right: 30px;
-    padding-bottom: 30px;
   }
 
   #panel-two.open {
@@ -184,10 +268,6 @@ h1 {
     /* コンテンツが開いたときの背景画像 */
     font-size: 16px;
     font-weight: 400;
-    padding-top: 30px;
-    padding-left: 29px;
-    padding-right: 30px;
-    padding-bottom: 30px;
   }
 
   #panel-one.open,
@@ -218,56 +298,5 @@ h1 {
     padding-left: 51px;
     padding-right: 50px;
     padding-bottom: 60px;
-  }
-}
-
-@media screen and (max-width:320px) {
-  /*　画面サイズが320px以下の場合読み込む　*/
-  .panel-container {
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .panel-header {
-    width: 300px;
-    height: 64px;
-    cursor: pointer;
-    background-image: url('../img/assets/mb-kadomarubutton.png');
-    /* ヘッダーのデフォルトの背景画像 */
-  }
-
-  .panel-header.open {
-    height: 32px;
-    background-image: url('../img/assets/mb-kadomaruheader.png') !important;
-    /* ヘッダーが開いたときの背景画像 */
-  }
-
-  #panel-one.open {
-    width: 300px !important;
-    height: 483px !important;
-    background-image: url('../img/assets/mb-kadomarubody1.png');
-    /* コンテンツが開いたときの背景画像 */
-    font-size: 16px;
-    font-weight: 400;
-    padding-top: 30px;
-    padding-left: 29px;
-    padding-right: 30px;
-    padding-bottom: 30px;
-  }
-
-  #panel-two.open {
-    width: 300px !important;
-    height: 603px !important;
-    background-image: url('../img/assets/mb-kadomarubody2.png');
-    /* コンテンツが開いたときの背景画像 */
-    font-size: 16px;
-    font-weight: 400;
-    padding-top: 30px;
-    padding-left: 29px;
-    padding-right: 30px;
-    padding-bottom: 30px;
   }
 }
