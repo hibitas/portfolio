@@ -26,14 +26,11 @@ h1 {
 
 .panels-row {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .panels {
   font-family: 'Noto sans JP';
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
 }
 
 .panel-header {
@@ -55,19 +52,20 @@ h1 {
   align-items: center;
 }
 
-#panel-one {
-  display: none;
+.panel-content>p {
+  font-family: 'Noto sans JP';
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 30px;
 }
 
+#panel-one,
 #panel-two {
   display: none;
 }
 
 #panel-one.open,
 #panel-two.open {
-  font-family: 'Noto sans JP';
-  font-size: 20px;
-  font-weight: 400;
   display: block;
   /* クリックで開くときに表示 */
   padding-top: 61px;
@@ -98,8 +96,12 @@ h1 {
 
 .panel-content {
   background-image: none;
-  margin: 0;
+  display: flex;
   /* コンテンツのデフォルトの背景画像 */
+}
+
+.modal-open {
+  padding-right: 0px !important;
 }
 
 @media screen and (max-width:320px) {
@@ -109,7 +111,6 @@ h1 {
   h1 {
     margin-top: 100px !important;
     font-size: 40px;
-    min-height: -webkit-fill-available;
     overflow-x: hidden;
   }
 
@@ -121,25 +122,14 @@ h1 {
 
   .panels-row {
     flex-direction: column;
-    justify-content: space-around;
-    align-items: stretch;
   }
 
   .panels {
-    display: table-cell;
-    vertical-align: middle;
     padding: 0;
   }
 
   .panels:first-child>div {
     margin-top: 30px;
-  }
-
-  .panel-container {
-    margin-left: 30px;
-    margin-right: 30px;
-    margin-bottom: 30px;
-
   }
 
   .panel-header>p {
@@ -149,10 +139,15 @@ h1 {
     height: 64px !important;
   }
 
-  .panel-container {
+  .panel-content>p {
+    font-size: 16px;
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 30px;
+    padding-top: 30px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 30px;
   }
 
   .panel-header {
@@ -184,12 +179,8 @@ h1 {
   #panel-one.open,
   #panel-two.open {
     width: 300px !important;
-    font-size: 16px;
     font-weight: 400;
-    padding-top: 30px;
-    padding-left: 29px;
-    padding-right: 30px;
-    padding-bottom: 30px;
+    padding: 0;
   }
 }
 
@@ -199,7 +190,6 @@ h1 {
   h1 {
     margin-top: 100px !important;
     font-size: 40px;
-    min-height: -webkit-fill-available;
     overflow-x: hidden;
   }
 
@@ -212,13 +202,7 @@ h1 {
   .panels-row {
     flex-direction: column;
     justify-content: space-around;
-    align-items: stretch;
-  }
-
-  .panels {
-    display: table-cell;
-    vertical-align: middle;
-    padding: 0;
+    align-items: center;
   }
 
   .panels:first-child>div {
@@ -236,6 +220,17 @@ h1 {
     padding-bottom: 18px;
     font-size: 20px;
     height: 64px !important;
+  }
+
+  .panel-content>p {
+    font-size: 16px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 30px;
+    padding-top: 30px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 30px;
   }
 
   .panel-header {
@@ -277,19 +272,31 @@ h1 {
     padding-right: 30px;
     padding-bottom: 30px;
   }
-
-  .modal-open {
-    padding-right: 0px !important;
-  }
 }
 
 @media screen and (min-width:769px) {
 
   /* 画面サイズが769px以上の場合読み込む */
 
+  html,
+  body {
+    overflow: hidden;
+  }
+
   .policy {
     font-size: 30px;
     font-weight: 500;
+  }
+
+  .panels {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .panel-container {
+    margin-left: 98px;
+    margin-right: 98px;
   }
 
   #panel-one.open,
